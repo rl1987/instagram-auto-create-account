@@ -29,7 +29,7 @@ driver.get("https://www.instagram.com/accounts/emailsignup/")
 time.sleep(8)
 try:
     cookie = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH,
-                                                                         '/html/body/div[3]/div/div/button[1]'))).click()
+                                                                         '//button[contains(text(), "Accept All")]'))).click()
 except:
 	pass
 name = account.username()
