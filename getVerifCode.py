@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import time
 
 def getInstVeriCode(mailName, domain, driver):
