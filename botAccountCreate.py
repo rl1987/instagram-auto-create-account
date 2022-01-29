@@ -1,23 +1,26 @@
+import time
+import argparse
+
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from fake_useragent import UserAgent
+from selenium import webdriver
+import chromedriver_binary
+
 import accountInfoGenerator as account
 import getVerifCode as verifiCode
-from selenium import webdriver
 import fakeMail as email
-import time
-import argparse
 
+parser = argparse.ArgumentParser()
 args = parser.parse_args()
 ua = UserAgent()
 userAgent = ua.random
 print(userAgent)
 
 
-#replace 'your path here' with your chrome binary absolute path
-driver = webdriver.Chrome(r'your path here')
+driver = webdriver.Chrome()
 
 #saves the login & pass into accounts.txt file.
 acc = open("accounts.txt", "a")
